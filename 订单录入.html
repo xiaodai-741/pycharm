@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui-v2.5.7/css/layui.css"/>
+    <script src="https://www.layuicdn.com/layui-v2.5.7/layui.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://files.cnblogs.com/files/liuchenxing/jquery.table2excel.js"></script>
+
+</head>
+<body>
+<br><br>
+<center><h3>江门丽宫国际食品股份有限公司产品订单</h3></center>
+<table class="layui-table" id="exceltable">
+    <tbody>
+    <tr>
+        <th>区域:</th>
+        <th>
+            <label class="layui-inline">
+                <input type="text" name="area" list="areas" class="layui-input">
+            </label>
+            <!-- 使用style="display:none;"将datalist元素设定为不显示 -->
+            <datalist id="areas" style="display:none; ">
+                <option name="area">东北大区</option>
+                <option name="area">西北大区</option>
+                <option name="area">华北大区</option>
+                <option name="area">华中大区</option>
+                <option name="area">华东大区</option>
+                <option name="area">华南大区</option>
+                <option name="area">鲁东大区</option>
+                <option name="area">西南大区</option>
+                <option name="area">特通渠道</option>
+                <option name="area">安徽大区</option>
+            </datalist>
+        </th>
+        <th>业务人员:</th>
+        <th>
+            <label class="layui-inline">
+                <input type="text" name="saleman" list="salemans" class="layui-input">
+            </label>
+            <!-- 使用style="display:none;"将datalist元素设定为不显示 -->
+            <datalist id="salemans" style="display:none; ">
+                <option name="saleman">郭恒春</option>
+                <option name="saleman">胡悦</option>
+                <option name="saleman">贾义强</option>
+                <option name="saleman">宋志刚</option>
+                <option name="saleman">王鼎</option>
+                <option name="saleman">张颖毅</option>
+                <option name="saleman">黄钊鸿</option>
+                <option name="saleman">王占刚</option>
+                <option name="saleman">谢法伟</option>
+                <option name="saleman">董吉遥</option>
+                <option name="saleman">安雯</option>
+                <option name="saleman">唐燕</option>
+                <option name="saleman">贾震莉</option>
+                <option name="saleman">童利荣</option>
+                <option name="saleman">王斌</option>
+                <option name="saleman">于洋</option>
+                <option name="saleman">栾毅</option>
+                <option name="saleman">杜方新</option>
+                <option name="saleman">桑海滨</option>
+                <option name="saleman">何伟力</option>
+                <option name="saleman">王好山</option>
+                <option name="saleman">王利想</option>
+                <option name="saleman">张帅</option>
+                <option name="saleman">李彬</option>
+                <option name="saleman">刘晓莉</option>
+                <option name="saleman">张冬磊</option>
+                <option name="saleman">武崇</option>
+                <option name="saleman">曾芳</option>
+                <option name="saleman">戴征奎</option>
+                <option name="saleman">巫丽娟</option>
+                <option name="saleman">陈彩凤</option>
+                <option name="saleman">黄娟</option>
+                <option name="saleman">袁梦洁</option>
+                <option name="saleman">李凌飞</option>
+                <option name="saleman">华寿和</option>
+                <option name="saleman">裴小锐</option>
+                <option name="saleman">田永常</option>
+                <option name="saleman">苏泽仪</option>
+                <option name="saleman">阮婷滟</option>
+                <option name="saleman">张佳丽</option>
+                <option name="saleman">邱飞铭</option>
+                <option name="saleman">梁思婷</option>
+                <option name="saleman">杨超</option>
+                <option name="saleman">马文水</option>
+                <option name="saleman">何小红</option>
+                <option name="saleman">商成英</option>
+                <option name="saleman">杨俊</option>
+                <option name="saleman">伊天明</option>
+                <option name="saleman">汤芹</option>
+            </datalist>
+        </th>
+        <th>区域经理:</th>
+        <th>
+            <label class="layui-inline">
+                <input type="text" name="manage" list="manages" class="layui-input">
+            </label>
+            <!-- 使用style="display:none;"将datalist元素设定为不显示 -->
+            <datalist id="manages" style="display:none; ">
+                <option name="manage">郭恒春</option>
+                <option name="manage">胡悦</option>
+                <option name="manage">贾义强</option>
+                <option name="manage">宋志刚</option>
+                <option name="manage">王鼎</option>
+                <option name="manage">张颖毅</option>
+                <option name="manage">黄钊鸿</option>
+                <option name="manage">王占刚</option>
+                <option name="manage">谢法伟</option>
+                <option name="manage">董吉遥</option>
+            </datalist>
+        </th>
+        <th>订单日期:</th>
+        <th>
+            <label class="layui-inline">
+                <input type="date" name="time" class="layui-input">
+            </label>
+            <!-- 使用style="display:none;"将datalist元素设定为不显示 -->
+        </th>
+    </tr>
+    <tr>
+        <th>序号</th>
+        <th>产品名称</th>
+        <th>规格</th>
+        <th>单位</th>
+        <th>出厂价</th>
+        <th>数量</th>
+        <th>金额(元)</th>
+        <th>备注</th>
+    </tr>
+    <tr id="clo">
+        <td class="td">1</td>
+        <td><input /></td>
+        <td><input placeholder="添加主要技术参数"/></td>
+    </tr>
+    </tbody>
+</table>
+　<input type="button" value="导出" class="Button" onclick="Export();"/>
+<button onclick="fun()">增加一行</button>
+<button onclick="del()">删除一行</button>
+<script type="text/javascript">
+    //前面的序号1,2,3......
+    var i = 1;
+    $(".td").each(function () {
+        $(this).html(i++);
+    })
+
+    //添加一行
+    function fun() {
+        var $td = $("#clo").clone();       //增加一行,克隆第一个对象
+        $(".table").append($td);
+        var i = 1;
+        $(".td").each(function () {       //增加一行后重新更新序号1,2,3......
+            $(this).html(i++);
+        })
+        $("table tr:last").find(":input").val('');   //将尾行元素克隆来的保存的值清空
+    }
+
+    //删除一行
+    function del() {
+        $("table tr:not(:first):not(:first):last").remove();//移除最后一行,并且保留前两行
+    }
+</script>
+<script>
+    function Export() {
+        $("#exceltable").table2excel({            //exceltable为存放数据的table
+            // 不被导出的表格行的CSS class类
+            exclude: ".noExl",
+            // 导出的Excel文档的名称
+            name: "表格-" + new Date().getTime(),
+            // Excel文件的名称
+            filename: "表格-" + new Date().getTime() + ".xls",
+            bootstrap: false,
+            exclude_inputs: true
+        });
+    }
+</script>
+</body>
+</html>
